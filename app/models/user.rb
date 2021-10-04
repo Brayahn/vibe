@@ -4,11 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :timeoutable,
          :recoverable, :rememberable, :validatable
 
-         def timeout_in
-          return 1.year if admin?
-          1.days
-         end
+        
 
-         has many :messages
+         has_many :messages
 
 end
