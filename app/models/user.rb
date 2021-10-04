@@ -8,4 +8,7 @@ class User < ApplicationRecord
           return 1.year if admin?
           1.days
          end
+
+         has many :messages
+
 end
